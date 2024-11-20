@@ -22,7 +22,7 @@ export function getNextRoutes(
   if (fs.existsSync(`${src}pages`)) {
     pagePaths = listPaths(`${src}pages`, { includeFiles: true }).filter(
       (path) => {
-        if (path?.includes("/pages/api/")) return false;
+        // if (path?.includes("/pages/api/")) return false;
         const file = path.split("/").at(-1);
         const extension = file?.split(".").at(-1);
         return extension && extensions.includes(extension);
